@@ -5,9 +5,9 @@ import {
 	INodeProperties,
 } from 'n8n-workflow';
 
-export class HttpBinApi implements ICredentialType {
+export class ChatWootApi implements ICredentialType {
 	name = 'httpbinApi';
-	displayName = 'HttpBin API';
+	displayName = 'ChatWoot API';
 	documentationUrl = '<your-docs-url>';
 	properties: INodeProperties[] = [
 		{

@@ -1,17 +1,17 @@
 import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 import { httpVerbFields, httpVerbOperations } from './HttpVerbDescription';
 
-export class HttpBin implements INodeType {
+export class ChatWoot implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'HttpBin',
+		displayName: 'ChatWoot',
 		name: 'httpBin',
 		icon: 'file:httpbin.svg',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Interact with HttpBin API',
+		description: 'Interact with ChatWoot API',
 		defaults: {
-			name: 'HttpBin',
+			name: 'ChatWoot',
 		},
 		inputs: ['main'],
 		outputs: ['main'],
