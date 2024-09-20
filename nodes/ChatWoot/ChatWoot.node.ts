@@ -5,7 +5,7 @@ export class ChatWoot implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'ChatWoot',
 		name: 'httpBin',
-		icon: 'file:httpbin.svg',
+		icon: 'file:chatwoot.png',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
