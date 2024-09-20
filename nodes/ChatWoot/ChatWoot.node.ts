@@ -1,5 +1,5 @@
 import { INodeType, INodeTypeDescription } from 'n8n-workflow';
-import { httpVerbFields, httpVerbOperations } from './HttpVerbDescription';
+import { httpVerbFields, httpVerbOperations } from './ChatWootDescription';
 
 export class ChatWoot implements INodeType {
 	description: INodeTypeDescription = {
