@@ -1,5 +1,5 @@
 {
-  "name": "n8n-nodes-chatwoot",
+  "name": "@devlikeapro/n8n-nodes-chatwoot",
   "version": "1.0.0",
   "description": "",
   "keywords": [
@@ -22,7 +22,6 @@
   "packageManager": "pnpm@9.1.4",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "build": "tsc && gulp build:icons",
     "dev": "tsc --watch",
     "format": "prettier nodes credentials --write",
