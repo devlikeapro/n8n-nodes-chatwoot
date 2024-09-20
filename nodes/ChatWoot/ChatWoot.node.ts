@@ -1,10 +1,10 @@
 import { INodeType, INodeTypeDescription } from 'n8n-workflow';
-import { OpenAPIN8NParser, ParserConfig } from '@devlikeapro/n8n-openapi-node';
+import { N8NPropertiesBuilder, N8NPropertiesBuilderConfig } from '@devlikeapro/n8n-openapi-node';
 import * as doc from './openapi.json';
 
-const config: ParserConfig = {}
-const parser = new OpenAPIN8NParser(doc, config);
-const properties = parser.process()
+const config: N8NPropertiesBuilderConfig = {}
+const parser = new N8NPropertiesBuilder(doc, config);
+const properties = parser.build()
 
 export class ChatWoot implements INodeType {
 	description: INodeTypeDescription = {
