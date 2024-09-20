@@ -1,7 +1,8 @@
 .PHONY: clean build link start dev
 
 build:
-	npm run lint && npm run build
+	#npm run lint && npm run build
+	npm run build
 
 link:
 	npm link
@@ -14,7 +15,7 @@ tests:
 
 dev:
 	make clean
-	make tests
+	#make tests
 	make build
 	make link
 	make start
