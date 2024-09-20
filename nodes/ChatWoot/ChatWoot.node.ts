@@ -4,7 +4,7 @@ import { httpVerbFields, httpVerbOperations } from './ChatWootDescription';
 export class ChatWoot implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'ChatWoot',
-		name: 'httpBin',
+		name: 'chatWoot',
 		icon: 'file:chatwoot.png',
 		group: ['transform'],
 		version: 1,
@@ -17,7 +17,7 @@ export class ChatWoot implements INodeType {
 		outputs: ['main'],
 		credentials: [
 			{
-				name: 'httpbinApi',
+				name: 'chatwootApi',
 				required: false,
 			},
 		],

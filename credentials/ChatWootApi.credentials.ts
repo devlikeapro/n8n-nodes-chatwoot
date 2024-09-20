@@ -6,7 +6,7 @@ import {
 } from 'n8n-workflow';
 
 export class ChatWootApi implements ICredentialType {
-	name = 'httpbinApi';
+	name = 'chatwootApi';
 	displayName = 'ChatWoot API';
 	documentationUrl = '<your-docs-url>';
 	properties: INodeProperties[] = [
