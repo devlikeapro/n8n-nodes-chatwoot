@@ -1,6 +1,5 @@
 import {
-	IAuthenticateGeneric,
-	ICredentialTestRequest,
+	IAuthenticateGeneric, ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
 } from 'n8n-workflow';
@@ -8,43 +7,39 @@ import {
 export class ChatWootApi implements ICredentialType {
 	name = 'chatwootApi';
 	displayName = 'ChatWoot API';
-	documentationUrl = '<your-docs-url>';
+	documentationUrl = 'https://github.com/sufficit/n8n-nodes-chatwoot/docs/auth';
 	properties: INodeProperties[] = [
 		{
-			displayName: 'Token',
-			name: 'token',
+			displayName: 'ChatWoot API URL',
+			name: 'baseUrl',
+			placeholder: "https://www.chatwoot.com",
 			type: 'string',
 			default: '',
-			typeOptions: {
-				password: true,
-			}
+			required: true,
 		},
 		{
-			displayName: 'Domain',
-			name: 'domain',
+			displayName: 'Access Token',
+			name: 'accessToken',
 			type: 'string',
-			default: 'https://httpbin.org',
-		},
+			placeholder: "00000000-0000-0000-0000-000000000000",
+			default: '',
+			required: true,
+		}
 	];
 
-	// This allows the credential to be used by other parts of n8n
-	// stating how this credential is injected as part of the request
-	// An example is the Http Request node that can make generic calls
-	// reusing this credential
 	authenticate: IAuthenticateGeneric = {
 		type: 'generic',
 		properties: {
 			headers: {
-				Authorization: '={{"Bearer " + $credentials.token}}',
+				'api_access_token': '={{$credentials.accessToken}}',
 			},
 		},
 	};
 
-	// The block below tells how this credential can be tested
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: '={{$credentials?.domain}}',
-			url: '/bearer',
+			baseURL: '={{$credentials.url}}',
+			url: '/api',
 		},
 	};
 }
