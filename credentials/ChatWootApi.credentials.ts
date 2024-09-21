@@ -11,7 +11,7 @@ export class ChatWootApi implements ICredentialType {
 	properties: INodeProperties[] = [
 		{
 			displayName: 'ChatWoot API URL',
-			name: 'baseUrl',
+			name: 'url',
 			placeholder: "https://www.chatwoot.com",
 			type: 'string',
 			default: '',
@@ -24,6 +24,7 @@ export class ChatWootApi implements ICredentialType {
 			placeholder: "00000000-0000-0000-0000-000000000000",
 			default: '',
 			required: true,
+			typeOptions: { password: true },
 		}
 	];
 
