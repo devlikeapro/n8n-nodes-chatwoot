@@ -10,6 +10,8 @@ Power your n8n workflows with [Chatwoot](https://www.chatwoot.com/)!
 [**ChatWoot OpenAPI**](https://www.chatwoot.com/developers/api/)
 using [**devlikeapro/n8n-openapi-node**](https://github.com/devlikeapro/n8n-openapi-node)
 
+![screenshot](node.png)
+
 # Installation
 1. Install the package in your n8n instance:
 
