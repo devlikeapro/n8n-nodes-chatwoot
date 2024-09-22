@@ -23,7 +23,7 @@ export class ChatWoot implements INodeType {
         credentials: [
             {
                 name: 'chatwootApi',
-                required: false,
+                required: true,
             },
         ],
         requestDefaults: {
