@@ -6,12 +6,12 @@
 	"resources": {
 		"credentialDocumentation": [
 			{
-				"url": "http://httpbin.org/#/Auth/get_bearer"
+				"url": "https://www.chatwoot.com/docs/contributing-guide/chatwoot-apis"
 			}
 		],
 		"primaryDocumentation": [
 			{
-				"url": "http://httpbin.org/"
+				"url": "https://www.chatwoot.com/developers/api/"
 			}
 		]
 	}
