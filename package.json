@@ -1,15 +1,15 @@
 {
   "name": "@devlikeapro/n8n-nodes-chatwoot",
   "version": "1.0.0",
-  "description": "",
+  "description": "n8n node to connect with ChatWoot",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Devlikapro",
+    "email": "admin@devlike.pro"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,7 @@
     "test": "jest",
     "format": "prettier nodes credentials --write",
     "lint": "eslint nodes credentials package.json",
-    "lintfix": "eslint nodes credentials package.json --fix",
-    "prepublishOnly": "npm build && npm lint -c .eslintrc.prepublish.js nodes credentials package.json"
+    "lintfix": "eslint nodes credentials package.json --fix"
   },
   "files": [
     "dist"
