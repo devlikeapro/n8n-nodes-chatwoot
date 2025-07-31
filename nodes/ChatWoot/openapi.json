@@ -8114,8 +8114,9 @@
           "content_type": {
             "type": "string",
             "description": "if you want to create custom message types",
-            "example": "cards",
+            "example": "text",
             "enum": [
+              "text",
               "input_email",
               "cards",
               "input_select",
