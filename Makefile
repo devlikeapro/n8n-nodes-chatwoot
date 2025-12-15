@@ -24,4 +24,4 @@ clean:
 	rm -rf ./dist
 
 up-swagger:
-	wget -qO- http://localhost:3000/-json | jq '.' > ./nodes/WAHA/openapi/openapi.json
+	wget -qO- https://raw.githubusercontent.com/chatwoot/chatwoot/refs/heads/develop/swagger/swagger.json | jq '.' > ./openapi.json

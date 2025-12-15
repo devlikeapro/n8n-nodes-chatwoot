@@ -1,25 +1,21 @@
-import {INodeType, INodeTypeDescription} from 'n8n-workflow';
-import {N8NPropertiesBuilder, N8NPropertiesBuilderConfig} from '@devlikeapro/n8n-openapi-node';
-import * as doc from './openapi.json';
-
-const config: N8NPropertiesBuilderConfig = {}
-const parser = new N8NPropertiesBuilder(doc, config);
-const properties = parser.build()
+import {INodeType, INodeTypeDescription, NodeConnectionTypes} from 'n8n-workflow';
+import properties from "./openapi/resources";
 
 export class ChatWoot implements INodeType {
     description: INodeTypeDescription = {
         displayName: 'ChatWoot',
         name: 'chatWoot',
-        icon: 'file:chatwoot.svg',
+        icon: { light: 'file:chatwoot.svg', dark: 'file:chatwoot.dark.svg' },
         group: ['transform'],
+        usableAsTool: true,
         version: 1,
         subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
         description: 'Interact with ChatWoot API',
         defaults: {
             name: 'ChatWoot',
         },
-        inputs: ['main'],
-        outputs: ['main'],
+        inputs: [NodeConnectionTypes.Main],
+        outputs: [NodeConnectionTypes.Main],
         credentials: [
             {
                 name: 'chatwootApi',
